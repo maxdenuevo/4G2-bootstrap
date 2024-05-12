@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram and bootstrap</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<body>
+    <!--Navbar-->
+    <nav class="navbar navbar-light d-flex bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img src="./icons/Instagram logo.png" alt="ig-logo" width="24" height="24" class="d-inline-block align-text-top flex-grow-1">
+          Instagram
+        </a>
+        <!---modal button-->
+        <div class="d-flex gap-1">
+          <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            Create a new post
+          </button>
+          
+          <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Create a new post</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                      <div class="mb-3">
+                        <label for="exampleFormControlTextarea1" class="form-label">Caption:</label>
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Add the caption of your post..."></textarea>
+                      </div>
+                    <button type="button" class="btn btn-light">
+                      <img src="./icons/Camera icon.png" alt="Settings" width="20" height="20">
+                    </button>
+                    <button type="button" class="btn btn-light">
+                      <img src="./icons/Location marker.png" alt="Settings" width="20" height="20">
+                    </button>
+
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-success">Publish</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          <div class="btn-group">
+            <button type="button" class="btn btn-secondary dropdown-toggle"  id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+              <img src="./icons/Gear icon.png" alt="Settings" width="18" height="18"> <!--make white-->
+            </button>
+
+            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton1">
+              <li><a class="dropdown-item" href="#">Profile</a></li>
+              <li><a class="dropdown-item" href="#">Accesibility</a></li>
+              <li><a class="dropdown-item" href="#">Privacy and Data</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item text-danger" href="#">Log out</a></li>
+            </ul>
+          </div>
+      </div>
+    </nav>
+
+    <!--tabs-->
+
+    <ul class="nav justify-content-center nav-tabs" id="myTab" role="tablist">
+      <li class="nav-item" role="presentation">
+        <button class="nav-link active" id="grid-tab" data-bs-toggle="tab" data-bs-target="#grid-tab-pane" type="button" role="tab" aria-controls="grid-tab-pane" aria-selected="true">
+          <img src="./icons/Grid icon.png" alt="Grid Icon" width="24" height="24">
+        </button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="cards-tab" data-bs-toggle="tab" data-bs-target="#cards-tab-pane" type="button" role="tab" aria-controls="cards-tab-pane" aria-selected="false">
+          <img src="./icons/Square.png" alt="cards" width="24" height="24">
+        </button>
+      </li>
+    </ul>
+
+    <div class="tab-content" id="myTabContent">
+      <div class="tab-pane fade show active" id="grid-tab-pane" role="tabpanel" aria-labelledby="grid-tab" tabindex="0">
+
+    <!--grid,  revisar la documentación en bootstrap para object-fit-cover-->
+    
+      <div class="row">
+        <div class="col-4 p-1"><img src="./images/01corg.jpg" class="img-fluid object-fit-cover" alt="corgi"></div>
+        <div class="col-4 p-1"><img src="./images/02cat.jpg" class="img-fluid object-fit-cover" alt="white cat"></div>
+        <div class="col-4 p-1"><img src="./images/03lab.jpg" class="img-fluid object-fit-cover" alt="black lab"></div>
+        <div class="col-4 p-1"><img src="./images/04.jpg" class="img-fluid object-fit-cover" alt="dark dog"></div>
+        <div class="col-4 p-1"><img src="./images/05pug.jpg" class="img-fluid object-fit-cover" alt="black pug"></div>
+        <div class="col-4 p-1"><img src="./images/06aki.jpg" class="img-fluid object-fit-cover" alt="white malamut"></div>
+        <div class="col-4 p-1"><img src="./images/07cat.jpg" class="img-fluid object-fit-cover" alt="cat trying to stand up"></div>
+        <div class="col-4 p-1"><img src="./images/08.jpg" class="img-fluid object-fit-cover" alt="cute and ugly"></div>
+        <div class="col-4 p-1"><img src="./images/09french.jpg" class="img-fluid object-fit-cover" alt="french bull dog resting"></div>
+      </div>
+
+      </div>
+      <div class="tab-pane fade" id="cards-tab-pane" role="tabpanel" aria-labelledby="cards-tab" tabindex="0">
+        <div> <!--first card, add date-->
+          <div class="card my-2" style="width: 40rem; margin: auto;">
+            <div class="card-header">
+              <h3>Corgi puppy staring at the abyss</h3>
+            </div>
+            <img src="./images/01corg.jpg" class="card-img-top img-fluid" alt="Corgi">
+            <div class="card-body">
+              <h5 class="card-title">204 Likes</h5>
+              <p class="card-text">Quickest example for good-boy content.</p>
+            </div>
+          </div>
+        <br>
+          <div> <!--second card, add date-->
+            <div class="card my-2" style="width: 40rem; margin: auto;">
+              <div class="card-header">
+                <h3>White cat giving you the ice treatment</h3>
+              </div>
+              <img src="./images/02cat.jpg" class="card-img-top img-fluid" alt="white cat">
+              <div class="card-body">
+                <h5 class="card-title">204 Likes</h5>
+                <p class="card-text">Quickest example for good-boy content.</p>
+              </div>
+            </div>
+          <br>
+            <div> <!--third card, add date-->
+              <div class="card my-2" style="width: 40rem; margin: auto;">
+                <div class="card-header">
+                  <h3>Black lab looking for a treat</h3>
+                </div>
+                <img src="./images/03lab.jpg" class="card-img-top img-fluid" alt="black lab">
+                <div class="card-body">
+                  <h5 class="card-title">204 Likes</h5>
+                  <p class="card-text">Quickest example for good-boy content.</p>
+                </div>
+              </div>
+            <br>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+</body>
+</html>
